@@ -169,10 +169,10 @@ const KPIHierarchyDiagram = () => {
         },
         "高額課金": {
           metrics: [
-            { behavior: "ダイヤモンド会員、高額課金Tier1, Tier2ユーザー数", outcome: ["Tier 1 & Tier 2 ユーザー数", "プライムユーザー数"] },
-            { behavior: "ダイヤモンド会員、高額課金Tier1, Tier2ユーザーの課金額", outcome: ["Tier 1 & Tier 2 課金売上", "課金者ARPPU"] },
-            { behavior: "ダイヤモンド会員、高額課金Tier1, Tier2ユーザーのコイン消費額", outcome: ["消費率", "Tier 1 & Tier 2 課金売上", "消費者ARPPU"] },
-            { behavior: "ARPU(MTD Cash Revenue / Active User)", outcome: ["課金者ARPPU", "消費者ARPPU", "課金率"] },
+            { behavior: "ダイヤモンド会員、高額課金Tier1, Tier2ユーザー数", outcome: ["Tier 1 & Tier 2 ユーザー数", "ダイヤモンド会員数"] },
+            { behavior: "ダイヤモンド会員、高額課金Tier1, Tier2ユーザーの課金額", outcome: ["Tier 1 & Tier 2 ユーザー課金売上", "ダイヤモンド会員課金売上", "課金者ARPPU"] },
+            { behavior: "ダイヤモンド会員、高額課金Tier1, Tier2ユーザーのコイン消費額", outcome: ["Tier 1 & Tier 2 ユーザーBC消費売上", "ダイヤモンド会員BC消費売上", "消費者ARPPU"] },
+            { behavior: "ARPU(MTD Cash Revenue / Active User)", outcome: ["課金者ARPPU", "消費者ARPPU", "Tier 1 & Tier 2 ユーザーARPPU", "ダイヤモンド会員ARPPU", "課金率"] },
           ]
         },
         "消費効率": {
@@ -210,8 +210,9 @@ const KPIHierarchyDiagram = () => {
       subcategories: {
         "参加行動": {
           metrics: [
-            { behavior: "参加したイベント/キャンペーン企画の種類数", outcome: ["VSミッション完了率", "キャンペーンROAS"] },
-            { behavior: "イベント支援効率(ギフト金額あたり順位上昇度)", outcome: ["VSミッション完了率", "消費率"] },
+            { behavior: "参加したイベント数", outcome: ["リスナーとしてのイベント参加あたりの平均収益(ARPU)", "イベント期間中のギフティング額"] },
+            { behavior: "キャンペーン企画の種類数", outcome: ["キャンペーンROAS"] },
+            { behavior: "イベント支援効率", outcome: ["BC消費率", "ギフト金額あたり順位上昇度"] },
           ]
         },
         "施策効率": {
@@ -223,7 +224,7 @@ const KPIHierarchyDiagram = () => {
             { behavior: "流入経路別の継続率", outcome: ["全体7日継続率", "月次継続率", "既存ユーザー7日継続率"] },
           ]
         },
-        "キャスティング": {
+        "キャスティング(マーケティング)": {
           metrics: [
             { behavior: "キャスティング費用に対するROI", outcome: ["キャスティングROI", "キャスティング施策LTV", "高課金転換ライバー指標"] },
           ]
