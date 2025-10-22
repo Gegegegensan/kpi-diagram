@@ -258,8 +258,8 @@ const KPIHierarchyDiagram = () => {
     <div className="w-full h-screen overflow-auto bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">KPI因果関係図</h1>
-          <p className="text-gray-600 mb-4">行動指標(左) → 成果指標(右)の因果関係を階層的に表示</p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">KPI因果関係リスト (ユーザー側)</h1>
+          <p className="text-gray-600 mb-4">行動指標、成果指標の関係を階層的に表示</p>
           <div className="flex gap-4 flex-wrap text-sm">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-blue-100 border-2 border-blue-300 rounded"></div>
