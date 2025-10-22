@@ -20,28 +20,28 @@ const KPIHierarchyDiagram = () => {
       subcategories: {
         "ログイン・起動": {
           metrics: [
-            { behavior: "アプリ起動頻度/ログイン頻度", outcome: ["DAU/MAU比率", "DAU"] },
-            { behavior: "週間ログイン日数", outcome: ["DAU/MAU比率", "全体7日継続率"] },
-            { behavior: "アプリの滞留時間", outcome: [] },
+            { behavior: "アプリ起動頻度/ログイン頻度", outcome: ["DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "週間ログイン日数", outcome: ["DAU/MAU比率", "全体7日継続率", "MAU", "DAU"] },
+            { behavior: "アプリの滞留時間", outcome: ["MAU", "DAU"] },
           ]
         },
         "視聴頻度": {
           metrics: [
-            { behavior: "1日あたり平均視聴回数", outcome: ["DAU/MAU比率", "DAU"] },
-            { behavior: "視聴頻度(日/週/月)", outcome: ["DAU/MAU比率", "ローリング30日視聴者数"] },
-            { behavior: "月間平均視聴セッション数", outcome: ["MAU", "ローリング30日視聴者数"] },
+            { behavior: "1日あたり平均視聴回数", outcome: ["DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "視聴頻度(日/週/月)", outcome: ["DAU/MAU比率", "MAU","DAU", "ローリング30日視聴者数"] },
+            { behavior: "月間平均視聴セッション数", outcome: ["MAU", "DAU", "ローリング30日視聴者数"] },
             { behavior: "1ヶ月での視聴日数", outcome: ["MAU", "月次継続率"] },
-            { behavior: "直近1週間でのFrequency", outcome: ["DAU/MAU比率", "翌日継続率"] },
+            { behavior: "直近1週間でのアプリ使用頻度", outcome: ["DAU/MAU比率", "翌日継続率"] },
           ]
         },
         "通知反応": {
           metrics: [
-            { behavior: "通知クリック数", outcome: ["DAU/MAU比率", "カムバックユーザー率"] },
-            { behavior: "ライブ通知から○分以内の起動率", outcome: ["DAU/MAU比率", "カムバックユーザー率"] },
-            { behavior: "プッシュ通知への反応速度", outcome: ["DAU/MAU比率", "カムバックユーザー率"] },
-            { behavior: "通知クリック率/リマインダー利用率", outcome: ["DAU/MAU比率", "カムバックユーザー率"] },
-            { behavior: "推し配信者の通知受信ON率", outcome: ["DAU/MAU比率", "翌日継続率"] },
-            { behavior: "アプリ起動理由(通知/自発/ディープリンク)の割合", outcome: ["カムバックユーザー率", "DAU/MAU比率"] },
+            { behavior: "通知クリック数", outcome: ["DAU/MAU比率", "MAU", "DAU", "カムバックユーザー率"] },
+            { behavior: "ライブ通知から○分以内の起動率", outcome: ["DAU/MAU比率",  "MAU", "DAU", "カムバックユーザー率"] },
+            { behavior: "プッシュ通知への反応速度", outcome: ["DAU/MAU比率",  "MAU", "DAU", "カムバックユーザー率"] },
+            { behavior: "通知クリック率/リマインダー利用率", outcome: ["DAU/MAU比率",  "MAU", "DAU", "カムバックユーザー率"] },
+            { behavior: "推し配信者の通知受信ON率", outcome: ["DAU/MAU比率",  "MAU", "DAU", "翌日継続率"] },
+            { behavior: "アプリ起動理由(通知/自発/ディープリンク)の割合", outcome: ["カムバックユーザー率", "DAU/MAU比率",  "MAU", "DAU"] },
           ]
         },
       }
@@ -51,10 +51,10 @@ const KPIHierarchyDiagram = () => {
       subcategories: {
         "視聴時間・滞在": {
           metrics: [
-            { behavior: "そのリスナーの1日における全視聴時間", outcome: ["DAU/MAU比率", "DAU"] },
-            { behavior: "利用時間", outcome: ["DAU/MAU比率", "DAU"] },
-            { behavior: "平均視聴時間", outcome: ["DAU/MAU比率", "新規ユーザー初日視聴率"] },
-            { behavior: "同時視聴時間", outcome: ["DAU/MAU比率", "新規ユーザー初日視聴率"] },
+            { behavior: "そのリスナーの1日における全視聴時間", outcome: ["DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "利用時間", outcome: ["DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "平均視聴時間", outcome: ["DAU/MAU比率",  "MAU", "DAU", "新規ユーザー初日視聴率"] },
+            { behavior: "同時視聴時間", outcome: ["DAU/MAU比率",  "MAU", "DAU", "新規ユーザー初日視聴率"] },
             { behavior: "新規視聴時の視聴時間", outcome: ["推しライバー発見率", "ライバーマッチング数"] },
             { behavior: "推しライバー毎の平均視聴時間", outcome: ["継続ギフティング率", "エンゲージメントファネル"] },
             { behavior: "視聴時間あたりギフト額(効率的応援度)", outcome: ["課金者ARPPU", "消費者ARPPU", "継続ギフティング率"] },
@@ -62,20 +62,20 @@ const KPIHierarchyDiagram = () => {
         },
         "インタラクション": {
           metrics: [
-            { behavior: "コメント数", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
-            { behavior: "1セッションあたりコメント数", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
-            { behavior: "コメント投稿頻度", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
+            { behavior: "コメント数", outcome: ["エンゲージメントファネル", "DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "1セッションあたりコメント数", outcome: ["エンゲージメントファネル", "DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "コメント投稿頻度", outcome: ["エンゲージメントファネル", "DAU/MAU比率", "MAU", "DAU"] },
             { behavior: "コメント文字数の平均", outcome: ["エンゲージメントファネル"] },
-            { behavior: "コメント投稿先の配信者数", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
-            { behavior: "リアクション使用率(いいね、スタンプ等)", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
-            { behavior: "1配信あたりの平均エンゲージメント数", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
-            { behavior: "視聴中の画面注視率", outcome: ["エンゲージメントファネル", "DAU/MAU比率"] },
+            { behavior: "コメント投稿先の配信者数", outcome: ["エンゲージメントファネル", "DAU/MAU比率", "MAU", "DAU"] },
+            { behavior: "リアクション使用率(いいね、スタンプ等)", outcome: ["エンゲージメントファネル", "DAU/MAU比率",  "MAU", "DAU"] },
+            { behavior: "1配信あたりの平均エンゲージメント数", outcome: ["エンゲージメントファネル", "DAU/MAU比率",  "MAU", "DAU"] },
+            { behavior: "視聴中の画面注視率", outcome: ["エンゲージメントファネル", "DAU/MAU比率",  "MAU", "DAU"] },
           ]
         },
         "機能利用": {
           metrics: [
-            { behavior: "アプリの機能数に対するユーザーが使用している機能数", outcome: ["DAU/MAU比率", "エンゲージメントファネル"] },
-            { behavior: "利用機能数", outcome: ["DAU/MAU比率", "新規ユーザー7日継続率"] },
+            { behavior: "アプリの機能数に対するユーザーが使用している機能数", outcome: ["DAU/MAU比率",  "MAU", "DAU", "エンゲージメントファネル"] },
+            { behavior: "利用機能数", outcome: ["DAU/MAU比率",  "MAU", "DAU", "新規ユーザー7日継続率"] },
           ]
         },
       }
@@ -85,8 +85,8 @@ const KPIHierarchyDiagram = () => {
       subcategories: {
         "ライバー関係": {
           metrics: [
-            { behavior: "日常的に視聴するライバー数", outcome: ["DAU/MAU比率", "全体7日継続率"] },
-            { behavior: "フォローしている配信者数", outcome: ["DAU/MAU比率", "月次継続率"] },
+            { behavior: "日常的に視聴するライバー数", outcome: ["DAU/MAU比率",  "MAU", "DAU", "全体7日継続率"] },
+            { behavior: "フォローしている配信者数", outcome: ["DAU/MAU比率",  "MAU", "DAU", "月次継続率"] },
             { behavior: "視聴した配信者のユニーク数", outcome: ["月次継続率", "全体7日継続率"] },
             { behavior: "ライバー毎の連続視聴回数", outcome: ["全体7日継続率", "月次継続率"] },
             { behavior: "視聴するライバーレベルの幅", outcome: ["月次継続率"] },
@@ -96,8 +96,8 @@ const KPIHierarchyDiagram = () => {
           metrics: [
             { behavior: "視聴ジャンル数", outcome: ["月次継続率", "全体7日継続率"] },
             { behavior: "視聴配信の言語種類数", outcome: ["月次継続率"] },
-            { behavior: "視聴時間帯の分散度", outcome: ["DAU/MAU比率", "月次継続率"] },
-            { behavior: "時間帯、曜日分散、Seasonality", outcome: ["DAU/MAU比率", "月次継続率"] },
+            { behavior: "視聴時間帯の分散度", outcome: ["時間帯毎の視聴率", "DAU/MAU比率",  "MAU", "DAU", "月次継続率"] },
+            { behavior: "時間帯、曜日分散、Seasonality", outcome: ["時間帯/曜日毎の視聴率", "DAU/MAU比率",  "MAU", "DAU", "月次継続率"] },
           ]
         },
         "コミュニティ": {
@@ -177,7 +177,7 @@ const KPIHierarchyDiagram = () => {
         },
         "消費効率": {
           metrics: [
-            { behavior: "ギフト消費効率(一定期間での購入→使用率)", outcome: ["消費率", "リメインポイント消費期間"] },
+            { behavior: "ギフト消費効率(一定期間での購入→使用率)", outcome: ["BC消費率", "リメインポイント消費平均期間", "一定数課金から消費までのスパンを指標化"] },
           ]
         },
       }
@@ -189,18 +189,18 @@ const KPIHierarchyDiagram = () => {
           metrics: [
             { behavior: "推しライバー維持率(長期応援継続)", outcome: ["月次継続率", "全体7日継続率", "既存ユーザー7日継続率"] },
             { behavior: "推し変更率(他ライバーへの移行)", outcome: ["月次継続率", "継続ギフティング率"] },
-            { behavior: "お気に入り/フォロー中からの視聴率", outcome: ["DAU/MAU比率", "翌日継続率"] },
-            { behavior: "配信スケジュールの確認頻度", outcome: ["DAU/MAU比率", "翌日継続率"] },
+            { behavior: "お気に入り/フォロー中からの視聴率", outcome: ["DAU/MAU比率", "MAU", "DAU", "翌日継続率"] },
+            { behavior: "配信スケジュールの確認頻度", outcome: ["DAU/MAU比率", "MAU", "DAU", "翌日継続率"] },
           ]
         },
         "アーカイブ": {
           metrics: [
-            { behavior: "アーカイブの再視聴率", outcome: ["DAU/MAU比率", "ローリング30日視聴者数"] },
+            { behavior: "アーカイブの再視聴率", outcome: ["DAU/MAU比率", "MAU", "DAU", "ローリング30日視聴者数"] },
           ]
         },
         "マルチデバイス": {
           metrics: [
-            { behavior: "複数デバイスからのアクセス有無(サブアカ)", outcome: ["DAU/MAU比率", "月次継続率"] },
+            { behavior: "複数デバイスからのアクセス有無(サブアカ)", outcome: ["DAU/MAU比率", "MAU", "DAU", "月次継続率"] },
           ]
         },
       }
@@ -246,9 +246,8 @@ const KPIHierarchyDiagram = () => {
       subcategories: {
         "問い合わせ": {
           metrics: [
-            { behavior: "運営への問い合わせ数", outcome: ["(直接的な結果指標なし)"] },
-            { behavior: "お問い合わせの数", outcome: ["(直接的な結果指標なし)"] },
-            { behavior: "ユーザーからの一定期間内のお問い合わせ数", outcome: ["(直接的な結果指標なし)"] },
+            { behavior: "運営への問い合わせ数", outcome: ["対象ユーザーの継続率", "ポジティブなフィードバック率"] },
+            { behavior: "高額課金ユーザーからの一定期間内のお問い合わせ数", outcome: ["対象ユーザーの継続率", "ポジティブなフィードバック率"] },
           ]
         },
       }
